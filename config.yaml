@@ -1,0 +1,93 @@
+baseURL: "https://mbrt-yeah.github.io/uwe-uwe-hugo"
+enableInlineShortcodes: true
+languageCode: "en-us"
+title: "Uwe Uwe"
+theme: "uwe-uwe"
+relativeURLs: true
+
+disableKinds:
+    - "section"
+    - "taxonomy"
+    - "term"
+    - "RSS"
+
+params:
+
+    uweuwe:
+        metadata:
+            author: "Matthias Einbrodt"
+
+        logo: 
+            display: true
+            src: "/assets/img/uwe-uwe-logo.png"
+
+        shortDesc: 
+            display: true
+            value: "A minimalist theme that helps you build fully responsive documentation websites for small projects."
+
+        platformLinks:
+            display: true
+            displayMode: "as-icons-and-text" # Possible values: as-text | as-icons | as-icons-and-text
+
+            platforms:
+                -   name: "bitbucket"
+                    display: false
+                    iconSrc: "/assets/img/icons-platforms/bitbucket-icon.svg"
+                    target: ""
+                    text: "Bitbucket"
+                    title: "Go to Bitbucket repository"
+
+                -   name: "gitlab"
+                    display: false
+                    iconSrc: "/assets/img/icons-platforms/gitlab-icon.svg"
+                    target: ""
+                    text: "Gitlab"
+                    title: "Go to Gitlab repository"
+
+                -   name: "github"
+                    display: true
+                    iconSrc: "/assets/img/icons-platforms/github-icon.svg"
+                    target: "https://github.com/mbrt-yeah/uwe-uwe-hugo"
+                    text: "Github"
+                    title: "Go to Uwe Uwe (u²) Github repository"
+
+                -   name: "sourceforge"
+                    display: false
+                    iconSrc: "/assets/img/icons-platforms/sourceforge-icon.svg"
+                    target: ""
+                    text: "Sourceforge"
+                    title: "Go to Sourceforge repository"
+
+        toc: 
+            display: true
+
+        renderHooks:
+            image:
+                use: true
+
+            link:
+                use: true
+
+            heading:
+                use: true
+
+        syntaxHiglighingCustom:
+            use: false
+
+markup:
+    goldmark:
+        renderer:
+            unsafe: true
+
+    highlight:
+        anchorLineNos: false
+        codeFences: true
+        guessSyntax: false
+        hl_Lines: ""
+        lineAnchors: ""
+        lineNoStart: 1
+        lineNos: false
+        lineNumbersInTable: true
+        noClasses: true
+        style: igor
+        tabWidth: 4
