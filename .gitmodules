@@ -1,0 +1,3 @@
+[submodule "themes/uwe-uwe"]
+	path = themes/uwe-uwe
+	url = https://github.com/mbrt-yeah/uwe-uwe-hugo.git
