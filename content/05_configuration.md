@@ -1,14 +1,10 @@
 ---
 weight: 5
-title: "Configuration"
+title: "Theme Configuration"
 draft: false
 ---
 
-## Configuration
-
-### Hugo-Specific Configuration Parameters
-
-### Custom Configuration Parameters
+## Theme Configuration
 
 All custom configuration parameters have to be set in the `params.uweuwe` section of the configuration file of your website-project.
 
@@ -71,7 +67,7 @@ All custom configuration parameters have to be set in the `params.uweuwe` sectio
 
 {{< /tabs >}}
 
-#### Metadata
+### Metadata
 
 You can specify different information that serve as metadata for your website.
 
@@ -117,7 +113,7 @@ You can specify different information that serve as metadata for your website.
 
 {{< /tabs >}}
 
-#### Logo
+### Logo
 
 The logo is displayed at the top of the website.
 
@@ -168,7 +164,7 @@ If you don't want to display the logo just set the value of the `logo.display` p
 
 {{< /tabs >}}
 
-#### Short Description
+### Short Description
 
 The short description is displayed below the title of your website.
 
@@ -219,7 +215,7 @@ If you don't want to display the short description just set the value of the `sh
 
 {{< /tabs >}}
 
-#### Platform Links
+### Platform Links
 
 The platform links are displayed below the short description of the website.
 
@@ -322,7 +318,7 @@ You can specify an unlimited number of platform links simply by adding entries t
 
 {{< /tabs >}}
 
-#### Table of Contents
+### Table of Contents
 
 {{< notification type="info">}}
 The table of contents is created automatically based upon the <code>title</code> attribute in the front-matter of your content pages.
@@ -374,6 +370,117 @@ If you don't want to display the table of contents just set the value of the `to
 
 {{< /tabs >}}
 
-#### Markdown Render Hooks
+### Markdown Render Hooks
 
-The Uwe Uwe (u²) theme uses [Markdown Render Hooks](https://gohugo.io/getting-started/configuration-markup/#markdown-render-hooks) to alter the HTML output of images, links and headings.
+Per default the Uwe Uwe (u²) theme uses [Markdown Render Hooks](https://gohugo.io/getting-started/configuration-markup/#markdown-render-hooks) to alter the HTML output of images, links and headings.
+
+However, you can deactivate their usage in the following way:
+
+{{< tabs id="code-block-tabbed-10" >}}
+
+  {{< tab title="JSON" >}}
+  
+   ```Javascript
+   {
+       params: {
+           uweuwe: {
+               renderHooks: {
+                   image: {
+                       use: false,
+                   },
+                   link: {
+                       use: false,
+                   },
+                   heading: {
+                       use: false,
+                   }
+               }
+           }
+       }
+   }
+   ```
+
+  {{< /tab >}}
+
+  {{< tab title="Yaml" >}}
+
+   ```YAML
+   params:
+       uweuwe:
+           renderHooks: 
+               image:
+                   use: false
+               link:
+                   use: false
+               heading:
+                   use: false
+   ```
+
+  {{< /tab >}}
+
+  {{< tab title="Toml" >}}
+
+   ```TOML
+   [params]
+       [params.uweuwe]
+           [params.uweuwe.renderHooks]
+               [params.uweuwe.renderHooks.image]
+                   use = false
+               [params.uweuwe.renderHooks.link]
+                   use = false
+               [params.uweuwe.renderHooks.heading]
+                   use = false
+
+   ```
+
+  {{< /tab >}}
+
+{{< /tabs >}}
+
+### Syntax Highlighting via Prism.js
+
+Instead of Hugo's custom [syntax highlighter](https://gohugo.io/content-management/syntax-highlighting/) you can also choose the Javascript-based syntax highlighter [Prism.js](https://prismjs.com/).
+
+{{< tabs id="code-block-tabbed-11" >}}
+
+  {{< tab title="JSON" >}}
+  
+   ```Javascript
+   {
+       params: {
+           uweuwe: {
+               syntaxHiglighingCustom: {
+                   use: true,
+               }
+           }
+       }
+   }
+   ```
+
+  {{< /tab >}}
+
+  {{< tab title="Yaml" >}}
+
+   ```YAML
+   params:
+       uweuwe:
+           syntaxHiglighingCustom: 
+               use: true
+   ```
+
+  {{< /tab >}}
+
+  {{< tab title="Toml" >}}
+
+   ```TOML
+   [params]
+       [params.uweuwe]
+           [params.uweuwe.syntaxHiglighingCustom]
+               use = true
+   ```
+
+  {{< /tab >}}
+
+{{< /tabs >}}
+
+Please note that activating the Prism.js based syntax higlighting will cause the loading of additional Javascript and CSS files.
