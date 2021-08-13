@@ -59,7 +59,7 @@ You can download [the latest version of the Uwe Uwe (u²) theme](https://github.
 
 ### Git submodule
 
-You can add the Uwe Uwe (u²) theme as a git submodule by cloning it directly to the `/themes` directory of your website project using the following command:
+Should you use [Git](https://en.wikipedia.org/wiki/Git) to track changes within your website-project you can also add the Uwe Uwe (u²) theme as a git submodule by cloning it directly to the `/themes` directory of your website-project using the following command:
 
 ```cmd
 git submodule add https://github.com/mbrt-yeah/uwe-uwe-hugo.git themes/uwe-uwe
