@@ -483,4 +483,6 @@ Instead of Hugo's custom [syntax highlighter](https://gohugo.io/content-manageme
 
 {{< /tabs >}}
 
-Please note that activating the Prism.js based syntax higlighting will cause the loading of additional Javascript and CSS files.
+{{< notification type="warning" title="Please note">}}
+Activating the Prism.js based syntax higlighting will cause the loading of additional Javascript and CSS files.
+{{< /notification >}}
